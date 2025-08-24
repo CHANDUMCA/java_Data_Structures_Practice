@@ -6,9 +6,13 @@ import java.util.Scanner;
 public class NaturalNumbersSum {
 
 	public static void main(String[] args) {
+		double time=System.currentTimeMillis();
+		NaturalNumbersSum natur=new NaturalNumbersSum(); 
 		try (Scanner sc = new Scanner(System.in)) {
 			System.out.println("** Program to find the sum of natural numbers up to the given input **");
-			findSum(sc); // Start the sum calculation process
+			natur.findSum(sc);
+			System.out.println("Time taken - "+(System.currentTimeMillis()-time) +"millesec");
+			
 		}
 	}
 
@@ -28,7 +32,7 @@ public class NaturalNumbersSum {
 		if (confirm.equalsIgnoreCase("Y")) {
 			findSum(sc); // Call findSum again for a new input
 		} else if (confirm.equalsIgnoreCase("N")) {
-			System.out.println("Thank you for using the program!");
+			System.out.println("Thank you for using the program! TOtal time taken");
 		} else {
 			System.out.println("Please select Y or N");
 			findSum(sc); // Prompt again for valid input
