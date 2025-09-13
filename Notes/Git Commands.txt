@@ -1,0 +1,9 @@
+To commit new changes
+git status
+git add .   Note If you to add all use this else use 
+git add src/com/sunrizeit/BubbleSort.java
+git commit -m "Updated BubbleSort algorithm for better performance"
+git push
+
+
+consistency is the key to success. Concurrencey is the key to a code success.
