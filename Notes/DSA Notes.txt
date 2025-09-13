@@ -1,0 +1,23 @@
+youtube playlist
+https://www.youtube.com/playlist?list=PL6Zs6LgrJj3tDXv8a_elC6eT_4R5gfX4d
+
+1.Data Structures and Algorithms with Visualizations – Full Course (Java)
+Introduction to Algirithm Analysis
+Time Complexity of an Algorithm
+Space Complexity of an algorithm
+Asymptotic Analysis of an Algorithm
+Asymptotic Notations | Omega,Theta and Big O Notations
+
+
+Main
+1. What is algorithm
+2. Time Complexity of an Algorithm
+3. Space Complexity of an Algorithm
+4. Asymptoic Analysis of An Algirithm
+5. Types of Asymptotic Notations
+	Omega notation: Lower bound of an algorithm 
+	Big O Notation: Upper BOund of an algorithm
+	Theta Notation: Both Upper bound and lower bound algorithm Averageamount of time
+6. Time Complexity of Constant Algorithm (Big O)
+7. TIme Complexity of a Linear Algorithm (Big O)
+8. Time Complexity of a polynomial Algorithm (Big O)

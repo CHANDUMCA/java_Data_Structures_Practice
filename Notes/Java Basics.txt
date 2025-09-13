@@ -1,0 +1,160 @@
+📌 When to Use for Loop
+
+Use a for loop when:
+
+You know in advance how many times the loop should run.
+
+You are working with counters or ranges (like from 1 to 10).
+
+The update/increment happens in a predictable way.
+
+✅ Example: Print numbers from 1 to 10
+
+for (int i = 1; i <= 10; i++) {
+    System.out.println(i);
+}
+
+
+Here, the start, condition, and update are clear → perfect for a for loop.
+
+📌 When to Use while Loop
+
+Use a while loop when:
+
+You don’t know in advance how many times the loop will run.
+
+The loop continues until a condition is met.
+
+Input or external factors decide how long it runs.
+
+✅ Example: Keep reading numbers until user enters 0
+
+Scanner sc = new Scanner(System.in);
+int num = sc.nextInt();
+
+while (num != 0) {
+    System.out.println("You entered: " + num);
+    num = sc.nextInt(); // ask again
+}
+
+
+Here, we don’t know how many inputs the user will give → use while.
+
+📌 Quick Comparison
+Feature	for loop	while loop
+Iterations known in advance?	✅ Yes (good choice)	❌ No (better choice)
+Initialization + condition + update in one place?	✅ Yes	❌ No (scattered in body/condition)
+Common use cases	Counters, arrays, fixed ranges	User input, reading files, waiting events
+📌 Bonus: do-while Loop
+
+Special case: Runs at least once, even if condition is false.
+✅ Example:
+
+int n = 0;
+do {
+    System.out.println("Runs at least once");
+} while (n != 0);
+
+
+👉 Rule of Thumb:
+
+Fixed count → for loop
+
+Unknown count until condition met → while loop
+
+
+
+📌 Best Practices: Choosing Loops in Java
+1. Classic for loop
+
+Best when you know the exact range or index to iterate.
+
+Used often with arrays and when you need the index.
+
+✅ Example:
+
+for (int i = 0; i < arr.length; i++) {
+    System.out.println("Index " + i + ": " + arr[i]);
+}
+
+
+👉 Interview Tip:
+If you need index-based access, prefer for.
+
+2. Enhanced for-each loop
+
+Best for collections and arrays when you don’t need the index.
+
+Cleaner and less error-prone.
+
+✅ Example:
+
+for (String name : names) {
+    System.out.println(name);
+}
+
+
+👉 Interview Tip:
+Use for-each when only values matter (not index).
+BUT you cannot modify the collection structure (add/remove) while iterating.
+
+3. while loop
+
+Best when the number of iterations is unknown.
+
+Continues until a condition becomes false.
+
+✅ Example:
+
+while (!queue.isEmpty()) {
+    process(queue.poll());
+}
+
+
+👉 Interview Tip:
+Use when waiting for a condition or processing until empty.
+
+4. do-while loop
+
+Special case: Guarantees at least one execution.
+
+Useful for menus, retries, user input validation.
+
+✅ Example:
+
+int choice;
+do {
+    System.out.println("1. Start  2. Exit");
+    choice = sc.nextInt();
+} while (choice != 2);
+
+
+👉 Interview Tip:
+If the body must run once no matter what, pick do-while.
+
+📊 Summary Table
+Loop Type	Best Use Case
+for	Fixed count, index needed
+for-each	Arrays/collections when only elements matter
+while	Unknown count, stop when condition is met
+do-while	Must run at least once (menus, retries, prompts)
+⚡ Common Interview Questions
+
+When do you prefer for-each over for?
+→ When you don’t need the index.
+
+Can you remove elements from a collection inside a for-each?
+→ No, it throws ConcurrentModificationException. Use an Iterator instead.
+
+Why is while often used with input streams?
+→ Because you don’t know in advance how much data is coming.
+
+👉 Rule of Thumb for Interviews:
+
+Need index → for
+
+Only values → for-each
+
+Until condition true → while
+
+At least once → do-while
