@@ -18,12 +18,24 @@ public class ArraysData {
 		}
 
 		// 2 to sort the array
-		System.out.println("After using sor method");
+		System.out.println("After using sort method");
 		Arrays.sort(array);
 		for (int value : array) {
 			System.out.println(value);
 
 		}
+// TO find the missing number
+		int min = array[0];
+		int max = array[0];
+		System.out.println("Aftermi or max");
+		for (int value : array) {
+
+			if (value < min) min = value;
+			if(value>max) max=value;
+			
+		}
+		System.out.println(" min "+min);
+		System.out.println(" max "+max);
 
 	}
 }
